@@ -1,0 +1,33 @@
+SCENARIO 1:
+    -Navigate to "https://shopdemo.e-junkie.com/" website
+    -Click on 'Add to Cart' for 'Demo eBook'
+    -Click on 'Add Promo Code' button and enter "123456789"
+    -Click on 'Apply'
+    -Validate "Invalid promo code" message
+
+
+SCENARIO 2:
+    -Navigate to "https://shopdemo.e-junkie.com/" website
+    -Click on 'Add to Cart' for 'Demo eBook'
+    -Click on 'Pay using Debit Card'
+    -Click on 'Pay' button without filling any information
+    -Validate "Invalid Email - Invalid Email - Invalid Billing Name" message
+
+
+SCENARIO 3:
+    -Navigate to "https://shopdemo.e-junkie.com/" website
+    -Click on 'Add to Cart' for 'Demo eBook'
+    -Click on 'Pay using Debit Card'
+    -Enter Card number as "1111 1111 1111 1111"
+    -Validate "Invalid Card Number" message
+
+
+SCENARIO 4:
+    -Navigate to "https://shopdemo.e-junkie.com/" website
+    -Click on 'Add to Cart' for 'Demo eBook'
+    -Click on 'Pay using Debit Card'
+    -Fill the Billing Details Form (use fake data)
+    -Enter Card number as "4242 4242 4242 4242"
+    -Enter Expiration as "12/22" and CVV as "000"
+    -Click on 'Pay' button
+    -Validate you navigate to confirmation page and "Thank you!" message

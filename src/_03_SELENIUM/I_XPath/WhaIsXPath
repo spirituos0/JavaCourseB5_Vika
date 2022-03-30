@@ -1,0 +1,56 @@
+
+    XPath:
+        - we can traverse both down and up whereas CSS selector only moves down
+        - can search by text, using contains functionality
+        - is defined as XML path;
+
+    General locator strategy:
+        Step 1: try ID first, if not available, then... ->
+        Step 2: try CSS selector (faster), but if that doesn't work either, then... ->
+        Step 3: use XPath.
+
+
+    Types of XPaths:
+
+    1) Absolute:
+
+        - when locating the element, we start from the very first parent, then moving to the child and so on:
+
+            ex.:  /html/body/div[2]/div/section/figure/figcaption/div[2]
+            (single slash)
+
+        - if any of the elements get removed or added, code is going go FAIL.
+
+    2) Relative:
+
+        - if any of the elements get removed or added, it's not going to affect on the code:
+
+           ex.: //*[@id="contact_form"]
+           (double slash at the beginning)
+
+        Basic format of XPath:
+
+            XPath=//tagname[@Attribute='Value']
+
+               * tagname - input, div, img etc.
+               * attribute - attribute name
+               * value - value of the attribute
+
+        1st Example:
+            XPath for this html:
+                <input class="gNO89b" value="Google Search" aria-label="Google Search"
+                name="btnK" type="submit" data-ved="0ahUKEwjEiLKczMH1AhWkmHIEHfNRDbEQ4dUDCBA">
+            would be for example...
+                //input[@name="btnK"]
+
+        2nd Example:
+            XPath for this html:
+                <a id="endpoint" class="yt-simple-endpoint style-scope ytd-guide-entry-renderer"
+                tabindex="-1" role="tablist" title="Explore" href="/feed/explore"></a>
+            would be for example...
+                //a[@id='endpoint']
+
+        3rd Example:
+            //*[@class='barone'] -> find all elements, that contain 'barone'
+
+

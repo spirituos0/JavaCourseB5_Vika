@@ -1,0 +1,22 @@
+CSS:
+
+By attribute
+
+<input type=text class=form_text>
+<input type=email class=form_email>
+input type=radio class=form_radio>
+
+<div class="one two">
+    <p> Two paragraphs total. </p>
+    <p> Two paragraphs total. </p>
+</div>
+
+cssSelector:
+1. input[class*=form] - input elements with type attribute CONTAINING the text form in the value
+div[class*='one'] -> find all elements with div tag and class attribute should contain "one"!
+
+2. input[class^=form] - input elements with the type attribute STARTING WITH form
+div[class^='one'] -> find all elements with div tag and class attribute should start with "one"!
+
+3. input[class$=radio] - input elements with type attribute ENDING WITH radio
+div[class$='one'] -> find all elements with div tag and class attribute should end with "one"!

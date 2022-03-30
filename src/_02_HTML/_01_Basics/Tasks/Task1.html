@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+</head>
+    <body>
+    <h2>Personal Information Form</h2>
+
+        <form action="Success.html">
+
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput"> <br>
+
+            <label for="dobInput">Date of Birth:</label>
+            <input type="date" id="dobInput"> <br>
+
+            <label for="phoneInput">Phone number:</label>
+            <input type="number" id="phoneInput"> <br>
+
+            <!-- textarea is a field for multiline text input -->
+            <label for="textArea">Description</label>
+            <textarea rows="5" cols="40" id="textArea">Description</textarea> <br>
+            <!--
+            - id Description is added as name and as label
+            - in textarea 'Description' will be added to the field like a "ghost" text
+            that will disappear once you start filling out the field;
+            - rows and columns = size of the text area
+            -->
+
+            <label for="checkbox">Agree?</label>
+            <input type="checkbox" id="checkbox"> <br>
+
+            <label for="radioButton1">Male</label>
+            <input type="radio" id="radioButton1" name="Gender" checked>
+            <!-- 'checked' tag makes this checked by default -->
+            <label for="radioButton2">Female</label>
+            <input type="radio" id="radioButton2" name="Gender"> <br>
+
+            <p>Select your city:</p>
+            <select name="City">
+                <option value="Brooklyn">Brooklyn</option>
+                <option value="Boston">Boston</option>
+            </select> <br>
+
+            <input type="submit">
+        </form>
+
+    </body>
+</html>
